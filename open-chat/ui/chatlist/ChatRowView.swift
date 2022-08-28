@@ -30,7 +30,7 @@ struct ChatRowView: View {
                 }
 
                 HStack(alignment: .center) {
-                    Text("123123213123123213123123213123123213123123213123123213123123213")
+                    Text("123")
                         .lineLimit(2)
                         .font(.system(size: 15))
                         .foregroundColor(.secondary)

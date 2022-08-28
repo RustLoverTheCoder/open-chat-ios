@@ -11,16 +11,17 @@ struct ContactsView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("sort")
                 Spacer()
                 Text("contacts")
                 Spacer()
-                Image(systemName: "plus")
+                Image(systemName: "person.crop.circle.fill.badge.plus")
             }.padding(.horizontal)
-            Divider()
             ScrollView {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                LazyVStack(spacing:0){
+                    ForEach(1...100, id: \.self) { chat in
+                        ContactsRowVIew();
+                     }
+                }
             }
         }
     }
@@ -29,5 +30,6 @@ struct ContactsView: View {
 struct ContactsView_Previews: PreviewProvider {
     static var previews: some View {
         ContactsView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
