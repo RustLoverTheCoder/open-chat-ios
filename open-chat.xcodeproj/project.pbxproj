@@ -14,6 +14,10 @@
 		CF9E04C528B9F35F00FA9881 /* open_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04C428B9F35F00FA9881 /* open_chatTests.swift */; };
 		CF9E04CF28B9F35F00FA9881 /* open_chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04CE28B9F35F00FA9881 /* open_chatUITests.swift */; };
 		CF9E04D128B9F35F00FA9881 /* open_chatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04D028B9F35F00FA9881 /* open_chatUITestsLaunchTests.swift */; };
+		CF9E04E228BA487800FA9881 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E128BA487800FA9881 /* AccountView.swift */; };
+		CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E328BA48D900FA9881 /* ContactsView.swift */; };
+		CF9E04E628BA48FB00FA9881 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E528BA48FB00FA9881 /* ChatListView.swift */; };
+		CF9E04E828BB31D000FA9881 /* ChatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E728BB31D000FA9881 /* ChatRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		CF9E04CA28B9F35F00FA9881 /* open-chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "open-chatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9E04CE28B9F35F00FA9881 /* open_chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = open_chatUITests.swift; sourceTree = "<group>"; };
 		CF9E04D028B9F35F00FA9881 /* open_chatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = open_chatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF9E04E128BA487800FA9881 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CF9E04E328BA48D900FA9881 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		CF9E04E528BA48FB00FA9881 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		CF9E04E728BB31D000FA9881 /* ChatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		CF9E04B228B9F35B00FA9881 /* open-chat */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E04DD28B9FC8600FA9881 /* ui */,
 				CF9E04B328B9F35B00FA9881 /* open_chatApp.swift */,
 				CF9E04B528B9F35B00FA9881 /* ContentView.swift */,
 				CF9E04B728B9F35F00FA9881 /* Assets.xcassets */,
@@ -125,6 +134,41 @@
 				CF9E04D028B9F35F00FA9881 /* open_chatUITestsLaunchTests.swift */,
 			);
 			path = "open-chatUITests";
+			sourceTree = "<group>";
+		};
+		CF9E04DD28B9FC8600FA9881 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E04E028BA481500FA9881 /* account */,
+				CF9E04DF28BA47FC00FA9881 /* chatlist */,
+				CF9E04DE28BA47E100FA9881 /* contacts */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CF9E04DE28BA47E100FA9881 /* contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E04E328BA48D900FA9881 /* ContactsView.swift */,
+			);
+			path = contacts;
+			sourceTree = "<group>";
+		};
+		CF9E04DF28BA47FC00FA9881 /* chatlist */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E04E528BA48FB00FA9881 /* ChatListView.swift */,
+				CF9E04E728BB31D000FA9881 /* ChatRowView.swift */,
+			);
+			path = chatlist;
+			sourceTree = "<group>";
+		};
+		CF9E04E028BA481500FA9881 /* account */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E04E128BA487800FA9881 /* AccountView.swift */,
+			);
+			path = account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9E04E228BA487800FA9881 /* AccountView.swift in Sources */,
+				CF9E04E628BA48FB00FA9881 /* ChatListView.swift in Sources */,
 				CF9E04B628B9F35B00FA9881 /* ContentView.swift in Sources */,
+				CF9E04E828BB31D000FA9881 /* ChatRowView.swift in Sources */,
 				CF9E04B428B9F35B00FA9881 /* open_chatApp.swift in Sources */,
+				CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
