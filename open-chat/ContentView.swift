@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection: Int = 2
     var body: some View {
-        TabView(selection: .constant(1)) {
-            ContactsView().tabItem {
-                Image(systemName: "person.crop.circle.fill")
-                Text("通讯录") }.tag(1)
-            ChatListView().tabItem {
-                Image(systemName: "ellipsis.bubble.fill")
-                Text("聊天") }.tag(2)
-            AccountView().tabItem {
-                Image(systemName: "gearshape.fill")
-                Text("设置") }.tag(3)
-        }
+        NavigationView{
+            TabView(selection: .constant(selection)) {
+                ContactsView().tabItem {
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("好友") }.tag(1)
+                ChatListView().tabItem {
+                    Image(systemName: "ellipsis.bubble.fill")
+                    Text("聊天") }.tag(2)
+                AccountView().tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("设置") }.tag(3)
+            }
+        }.navigationBarHidden(true)
     }
 }
 

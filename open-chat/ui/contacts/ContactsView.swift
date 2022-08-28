@@ -19,7 +19,11 @@ struct ContactsView: View {
             ScrollView {
                 LazyVStack(spacing:0){
                     ForEach(1...100, id: \.self) { chat in
-                        ContactsRowVIew();
+                        NavigationLink(destination: ChatView()){
+                            ContactsRowVIew();
+                        }
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
                      }
                 }
             }
