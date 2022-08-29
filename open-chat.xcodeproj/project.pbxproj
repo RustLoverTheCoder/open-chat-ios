@@ -20,6 +20,7 @@
 		CF9E04E828BB31D000FA9881 /* ChatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E728BB31D000FA9881 /* ChatRowView.swift */; };
 		CF9E04EA28BB841A00FA9881 /* ContactsRowVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04E928BB841A00FA9881 /* ContactsRowVIew.swift */; };
 		CF9E04EF28BBAB0E00FA9881 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04EE28BBAB0E00FA9881 /* ChatView.swift */; };
+		CF9E04F128BD073100FA9881 /* AccountRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04F028BD073100FA9881 /* AccountRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CF9E04E728BB31D000FA9881 /* ChatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowView.swift; sourceTree = "<group>"; };
 		CF9E04E928BB841A00FA9881 /* ContactsRowVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRowVIew.swift; sourceTree = "<group>"; };
 		CF9E04EE28BBAB0E00FA9881 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		CF9E04F028BD073100FA9881 /* AccountRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9E04E128BA487800FA9881 /* AccountView.swift */,
+				CF9E04F028BD073100FA9881 /* AccountRowView.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				CF9E04B628B9F35B00FA9881 /* ContentView.swift in Sources */,
 				CF9E04E828BB31D000FA9881 /* ChatRowView.swift in Sources */,
 				CF9E04EF28BBAB0E00FA9881 /* ChatView.swift in Sources */,
+				CF9E04F128BD073100FA9881 /* AccountRowView.swift in Sources */,
 				CF9E04EA28BB841A00FA9881 /* ContactsRowVIew.swift in Sources */,
 				CF9E04B428B9F35B00FA9881 /* open_chatApp.swift in Sources */,
 				CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */,
