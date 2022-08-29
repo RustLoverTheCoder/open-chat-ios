@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChatListView: View {
     var body: some View {
+        NavigationView{
             VStack() {
                 HStack {
                     Text("Edit")
@@ -22,19 +23,17 @@ struct ChatListView: View {
                             NavigationLink(destination: ChatView()) {
                                 ChatRowView();
                             }
-                            .navigationBarTitle("")
-                            .navigationBarHidden(true)
                          }
                     }
                 }
-            }
+            }.navigationBarHidden(true)
+        }
+         
     }
 }
 
 struct ChatListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
             ChatListView()
-        }
     }
 }

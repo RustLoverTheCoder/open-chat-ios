@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection: Int = 2
     var body: some View {
-        NavigationView{
             TabView(selection: .constant(selection)) {
                 ContactsView().tabItem {
                     Image(systemName: "person.crop.circle.fill")
@@ -22,7 +21,6 @@ struct ContentView: View {
                     Image(systemName: "gearshape.fill")
                     Text("设置") }.tag(3)
             }
-        }.navigationBarHidden(true)
     }
 }
 
