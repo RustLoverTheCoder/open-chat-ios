@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E128BE5672000DF3D9 /* MessageListView.swift */; };
+		CF28C9E428BE5691000DF3D9 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E328BE5691000DF3D9 /* EditorView.swift */; };
 		CF9E04B428B9F35B00FA9881 /* open_chatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04B328B9F35B00FA9881 /* open_chatApp.swift */; };
 		CF9E04B628B9F35B00FA9881 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04B528B9F35B00FA9881 /* ContentView.swift */; };
 		CF9E04B828B9F35F00FA9881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9E04B728B9F35F00FA9881 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF28C9E128BE5672000DF3D9 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		CF28C9E328BE5691000DF3D9 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		CF9E04B028B9F35B00FA9881 /* open-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "open-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9E04B328B9F35B00FA9881 /* open_chatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = open_chatApp.swift; sourceTree = "<group>"; };
 		CF9E04B528B9F35B00FA9881 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				CF9E04EE28BBAB0E00FA9881 /* ChatView.swift */,
+				CF28C9E128BE5672000DF3D9 /* MessageListView.swift */,
+				CF28C9E328BE5691000DF3D9 /* EditorView.swift */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -320,12 +326,14 @@
 			files = (
 				CF9E04E228BA487800FA9881 /* AccountView.swift in Sources */,
 				CF9E04E628BA48FB00FA9881 /* ChatListView.swift in Sources */,
+				CF28C9E428BE5691000DF3D9 /* EditorView.swift in Sources */,
 				CF9E04B628B9F35B00FA9881 /* ContentView.swift in Sources */,
 				CF9E04E828BB31D000FA9881 /* ChatRowView.swift in Sources */,
 				CF9E04EF28BBAB0E00FA9881 /* ChatView.swift in Sources */,
 				CF9E04F128BD073100FA9881 /* AccountRowView.swift in Sources */,
 				CF9E04EA28BB841A00FA9881 /* ContactsRowVIew.swift in Sources */,
 				CF9E04B428B9F35B00FA9881 /* open_chatApp.swift in Sources */,
+				CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */,
 				CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
