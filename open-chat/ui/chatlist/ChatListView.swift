@@ -26,7 +26,8 @@ struct ChatListView: View {
                          }
                     }
                 }
-            }.navigationBarHidden(true)
+                .background(Color("primaryColor"))
+            }.navigationBarHidden(true).background(Color("secondaryColor"))
         }
          
     }

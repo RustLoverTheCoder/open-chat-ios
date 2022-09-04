@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Int = 2
+    init(){
+        UITabBar.appearance().backgroundColor = UIColor(named:"tertiaryColor")
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "tabbarUnselectedColor")
+    }
     var body: some View {
             TabView(selection: .constant(selection)) {
                 ContactsView().tabItem {
@@ -21,6 +26,7 @@ struct ContentView: View {
                     Image(systemName: "gearshape.fill")
                     Text("设置") }.tag(3)
             }
+            .accentColor(Color.white)
     }
 }
 
