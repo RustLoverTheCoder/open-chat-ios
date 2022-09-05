@@ -23,10 +23,11 @@ struct ChatRowView: View {
                     Text("Tourssliver")
                         .font(.system(size: 16, weight: .regular))
                         .fontWeight(.medium)
-                        .foregroundColor(.primary)
+                        .foregroundColor(Color("headerPrimary"))
                         .lineLimit(1)
                     Spacer()
                     Image(systemName: "checkmark")
+                        .foregroundColor(Color("headerSecondary"))
                         .frame(width: 18.0, height: 18.0)
                 }
 
@@ -35,7 +36,7 @@ struct ChatRowView: View {
                             .multilineTextAlignment(.leading)
                             .lineLimit(2)
                             .font(.system(size: 15))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(Color("headerSecondary"))
                             .frame(height: 36.0,alignment:.top)
                     Spacer()
                     Text("11:23")
@@ -50,6 +51,6 @@ struct ChatRowView: View {
 
 struct ChatRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatRowView()
+        ChatRowView().background(Color("primaryColor"))
     }
 }

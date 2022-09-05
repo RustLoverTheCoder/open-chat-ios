@@ -13,9 +13,11 @@ struct ChatListView: View {
             VStack() {
                 HStack {
                     Text("Edit")
-                        .font(.callout);
+                        .font(.callout)
+                        .foregroundColor(Color("interactiveNormal"));
                     Spacer()
                     Image(systemName: "square.and.pencil")
+                        .foregroundColor(Color("interactiveNormal"))
                 }.padding(.horizontal)
                 ScrollView {
                     LazyVStack(spacing:0){
