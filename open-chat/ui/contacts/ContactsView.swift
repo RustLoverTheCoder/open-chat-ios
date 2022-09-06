@@ -25,8 +25,8 @@ struct ContactsView: View {
                             }
                          }
                     }
-                }
-            }.navigationBarHidden(true)
+                }.background(Color("primaryColor"))
+            }.navigationBarHidden(true).background(Color("secondaryColor"))
         }
     }
 }

@@ -22,21 +22,21 @@ struct ContactsRowVIew: View {
                 Text("Tourssliver")
                     .font(.system(size: 16, weight: .regular))
                     .fontWeight(.medium)
-                    .foregroundColor(.primary)
+                    .foregroundColor(Color("headerPrimary"))
                 Text("在线")
                     .lineLimit(1)
                     .font(.system(size: 15))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color("headerSecondary"))
             }
             Spacer()
-            Image(systemName: "phone.circle.fill").foregroundColor(Color.gray).font(.system(size: 24))
-            Image(systemName: "bubble.left.circle.fill").foregroundColor(Color.gray).font(.system(size: 24))
+            Image(systemName: "phone.circle.fill").foregroundColor(Color("headerSecondary")).font(.system(size: 24))
+            Image(systemName: "bubble.left.circle.fill").foregroundColor(Color("headerSecondary")).font(.system(size: 24))
         }.padding(EdgeInsets(top: 9, leading: 16, bottom: 9, trailing: 16))
     }
 }
 
 struct ContactsRowVIew_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsRowVIew()
+        ContactsRowVIew().background(Color("primaryColor"))
     }
 }
