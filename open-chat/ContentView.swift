@@ -26,7 +26,7 @@ struct ContentView: View {
                     Image(systemName: "gearshape.fill")
                     Text("设置") }.tag(3)
             }
-            .accentColor(Color.white)
+            .accentColor(Color("headerPrimary"))
     }
 }
 
