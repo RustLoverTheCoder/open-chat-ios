@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct RootView: View {
+    var userFlow = UserFlow.login
+    init(){
+        userFlow = UserFlow.home
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            switch userFlow {
+            case .login:
+                LoginView()
+            case .home:
+                ContentView()
+            }
+        }.edgesIgnoringSafeArea(.bottom)
+            .transition(.opacity)
     }
 }
 
@@ -17,4 +29,9 @@ struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
     }
+}
+
+enum UserFlow {
+    case login
+    case home
 }
