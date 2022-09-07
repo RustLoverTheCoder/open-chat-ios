@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32598CF1CDAB9D6D5B2936F3 /* UserModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32598435C91DB7979B6E2FCB /* UserModal.swift */; };
 		CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E128BE5672000DF3D9 /* MessageListView.swift */; };
 		CF28C9E428BE5691000DF3D9 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E328BE5691000DF3D9 /* EditorView.swift */; };
 		CF3E30B228C871420023DD2E /* RootViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E30B128C871420023DD2E /* RootViewModal.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32598435C91DB7979B6E2FCB /* UserModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
 		CF28C9E128BE5672000DF3D9 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		CF28C9E328BE5691000DF3D9 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		CF3E30B128C871420023DD2E /* RootViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModal.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CF3E30B128C871420023DD2E /* RootViewModal.swift */,
+				32598435C91DB7979B6E2FCB /* UserModal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */,
 				CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */,
 				CF3E30B528C88D910023DD2E /* GlobalStore.swift in Sources */,
+				32598CF1CDAB9D6D5B2936F3 /* UserModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
