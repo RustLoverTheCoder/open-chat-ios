@@ -23,6 +23,7 @@ struct RootView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 .transition(.opacity)
                 .environmentObject(RootVM)
+                .animation(/*@START_MENU_TOKEN@*/.easeInOut/*@END_MENU_TOKEN@*/, value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/2/*@END_MENU_TOKEN@*/)
     }
 }
 

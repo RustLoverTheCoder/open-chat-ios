@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ChatListView: View {
+    
     var body: some View {
-        NavigationView{
+
             VStack() {
                 HStack {
                     Text("Edit")
@@ -22,15 +23,12 @@ struct ChatListView: View {
                 ScrollView {
                     LazyVStack(spacing:0){
                         ForEach(1...100, id: \.self) { chat in
-                            NavigationLink(destination: ChatView()) {
                                 ChatRowView();
-                            }
                          }
                     }
                 }
                 .background(Color("primaryColor"))
             }.navigationBarHidden(true).background(Color("secondaryColor"))
-        }
          
     }
 }

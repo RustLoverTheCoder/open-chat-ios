@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatRowView: View {
+    @EnvironmentObject var RootVM: RootViewModal
     var body: some View {
         HStack(spacing: 12.0) {
             AsyncImage(url: URL(string: "https://www.com8.cn/wp-content/uploads/2020/11/20201108023309-5fa758e5be02a.jpg")) { image in
