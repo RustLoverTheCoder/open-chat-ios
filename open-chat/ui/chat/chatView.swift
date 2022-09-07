@@ -20,6 +20,6 @@ struct ChatView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView()  .edgesIgnoringSafeArea(.bottom)
     }
 }

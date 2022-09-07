@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContactsRowVIew: View {
+    @EnvironmentObject var RootVM: RootViewModal
     var body: some View {
+        Button(action: {RootVM.userFlow = .chat}, label: {
         HStack(spacing: 8.0) {
             AsyncImage(url: URL(string: "https://www.com8.cn/wp-content/uploads/2020/11/20201108023309-5fa758e5be02a.jpg")) { image in
                 image
@@ -32,6 +34,7 @@ struct ContactsRowVIew: View {
             Image(systemName: "phone.circle.fill").foregroundColor(Color("headerSecondary")).font(.system(size: 24))
             Image(systemName: "bubble.left.circle.fill").foregroundColor(Color("headerSecondary")).font(.system(size: 24))
         }.padding(EdgeInsets(top: 9, leading: 16, bottom: 9, trailing: 16))
+        })
     }
 }
 

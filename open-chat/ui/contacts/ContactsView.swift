@@ -19,10 +19,7 @@ struct ContactsView: View {
                 }.padding(.horizontal)
                 ScrollView {
                     LazyVStack(spacing:0){
-                        ForEach(1...100, id: \.self) { chat in
-                            NavigationLink(destination: ChatView()){
-                                ContactsRowVIew();
-                            }
+                        ForEach(1...100, id: \.self) { chat in ContactsRowVIew();
                          }
                     }
                 }.background(Color("primaryColor"))
