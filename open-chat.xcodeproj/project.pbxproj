@@ -10,6 +10,7 @@
 		CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E128BE5672000DF3D9 /* MessageListView.swift */; };
 		CF28C9E428BE5691000DF3D9 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF28C9E328BE5691000DF3D9 /* EditorView.swift */; };
 		CF3E30B228C871420023DD2E /* RootViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E30B128C871420023DD2E /* RootViewModal.swift */; };
+		CF3E30B528C88D910023DD2E /* GlobalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E30B428C88D910023DD2E /* GlobalStore.swift */; };
 		CF826CE628C78915002A260A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF826CE528C78915002A260A /* RootView.swift */; };
 		CF826CE928C78A15002A260A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF826CE828C78A15002A260A /* LoginView.swift */; };
 		CF9E04B428B9F35B00FA9881 /* open_chatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9E04B328B9F35B00FA9881 /* open_chatApp.swift */; };
@@ -49,6 +50,7 @@
 		CF28C9E128BE5672000DF3D9 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		CF28C9E328BE5691000DF3D9 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		CF3E30B128C871420023DD2E /* RootViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModal.swift; sourceTree = "<group>"; };
+		CF3E30B428C88D910023DD2E /* GlobalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStore.swift; sourceTree = "<group>"; };
 		CF826CE528C78915002A260A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CF826CE828C78A15002A260A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CF9E04B028B9F35B00FA9881 /* open-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "open-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CF3E30B328C88C500023DD2E /* store */ = {
+			isa = PBXGroup;
+			children = (
+				CF3E30B428C88D910023DD2E /* GlobalStore.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
 		CF826CE728C789F7002A260A /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 		CF9E04B228B9F35B00FA9881 /* open-chat */ = {
 			isa = PBXGroup;
 			children = (
+				CF3E30B328C88C500023DD2E /* store */,
 				CF3E30B028C871100023DD2E /* Model */,
 				CF9E04DD28B9FC8600FA9881 /* ui */,
 				CF9E04B328B9F35B00FA9881 /* open_chatApp.swift */,
@@ -363,6 +374,7 @@
 				CF826CE928C78A15002A260A /* LoginView.swift in Sources */,
 				CF28C9E228BE5672000DF3D9 /* MessageListView.swift in Sources */,
 				CF9E04E428BA48D900FA9881 /* ContactsView.swift in Sources */,
+				CF3E30B528C88D910023DD2E /* GlobalStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

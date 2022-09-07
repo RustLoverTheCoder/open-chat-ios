@@ -19,8 +19,10 @@ struct RootView: View {
             case .chat:
                 ChatView()
             }
-        }.edgesIgnoringSafeArea(.bottom)
-        .transition(.opacity)
+        }
+                .edgesIgnoringSafeArea(.bottom)
+                .transition(.opacity)
+                .environmentObject(RootVM)
     }
 }
 

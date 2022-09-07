@@ -7,23 +7,23 @@
 
 import Foundation
 
-class RootViewModal:ObservableObject {
+class RootViewModal: ObservableObject {
     enum UserFlow {
         case login
         case home
         case chat
     }
-    
-    @Published var userFlow = UserFlow.login
-    
+
+    @Published var userFlow: UserFlow = .login
+
     func toLogin() {
         self.userFlow = .login
     }
-    
-    func toHome(){
+
+    func toHome() {
         self.userFlow = .home
     }
-    
+
     func toChat() {
         self.userFlow = .chat
     }

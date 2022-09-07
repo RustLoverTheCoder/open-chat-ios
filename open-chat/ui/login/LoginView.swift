@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var RootVM = RootViewModal()
+    @EnvironmentObject var RootVM: RootViewModal
     var body: some View {
         Button("Button") {
-            RootVM.toHome()
+            RootVM.userFlow = .home
         }
     }
 }
