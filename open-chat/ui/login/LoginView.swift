@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject var RootVM = RootViewModal()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("Button") {
+            RootVM.toHome()
+        }
     }
 }
 

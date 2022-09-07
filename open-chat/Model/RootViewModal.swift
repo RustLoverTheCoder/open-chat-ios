@@ -14,9 +14,19 @@ class RootViewModal:ObservableObject {
         case chat
     }
     
-    @Published var userFlow = UserFlow.home
+    @Published var userFlow = UserFlow.login
     
+    func toLogin() {
+        self.userFlow = .login
+    }
     
+    func toHome(){
+        self.userFlow = .home
+    }
+    
+    func toChat() {
+        self.userFlow = .chat
+    }
 }
 
 
