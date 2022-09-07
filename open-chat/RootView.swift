@@ -19,9 +19,11 @@ struct RootView: View {
                 LoginView()
             case .home:
                 ContentView()
+            case .chat:
+                ChatView()
             }
         }.edgesIgnoringSafeArea(.bottom)
-            .transition(.opacity)
+        .transition(.opacity)
     }
 }
 
@@ -34,4 +36,5 @@ struct RootView_Previews: PreviewProvider {
 enum UserFlow {
     case login
     case home
+    case chat
 }
