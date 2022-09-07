@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct RootView: View {
-    var userFlow = UserFlow.login
-    init(){
-        userFlow = UserFlow.home
-    }
+    @StateObject var RootVM = RootViewModal()
     var body: some View {
         Group {
-            switch userFlow {
+            switch RootVM.userFlow {
             case .login:
                 LoginView()
             case .home:
@@ -33,8 +30,3 @@ struct RootView_Previews: PreviewProvider {
     }
 }
 
-enum UserFlow {
-    case login
-    case home
-    case chat
-}
