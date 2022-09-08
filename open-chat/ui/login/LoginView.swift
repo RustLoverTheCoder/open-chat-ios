@@ -31,6 +31,7 @@ struct LoginView: View {
             
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
+                    .fontWeight(.medium)
                     .foregroundColor(Color("headerSecondary"))
                 TextField("", text: $value)
                         .padding()
@@ -43,6 +44,7 @@ struct LoginView: View {
             .padding(.bottom, 20.0)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("验证码")
+                    .fontWeight(.medium)
                     .foregroundColor(Color("headerSecondary"))
                 TextField("", text: $value)
                         .padding()
@@ -58,9 +60,10 @@ struct LoginView: View {
                 }, label: {
                     HStack {
                         Spacer()
-                        Text("LOGIN")
-                            .font(.headline)
-                                .foregroundColor(.white)
+                        Text("登录")
+                            .font(.title3)
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
                                 .frame(height: 52.0)
                         Spacer()
                     }

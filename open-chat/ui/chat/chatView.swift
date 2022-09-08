@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ChatView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var RootVM: RootViewModal
+    
     var body: some View {
         VStack(spacing: 0){
+            HStack {
+                Button(action: {
+                    RootVM.userFlow = .home
+                }, label: {
+                    Image(systemName: "chevron.left").foregroundColor(Color("headerPrimary"))
+                })
+                Spacer()
+            }.padding(.horizontal)
             Divider()
-            MessageListView()
+            MessageListView().background(Color("primaryColor"))
             EditorView()
-        }
+        }.background(Color("secondaryColor"))
     }
 }
 
