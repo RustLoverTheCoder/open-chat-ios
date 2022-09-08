@@ -37,7 +37,9 @@ struct LoginView: View {
             }
                     .padding([.leading, .bottom, .trailing], 16.0)
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    RootVM.userFlow = .home
+                }, label: {
                     HStack {
                         Spacer()
                         Text("LOGIN")
