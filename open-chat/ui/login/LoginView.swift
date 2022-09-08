@@ -17,25 +17,41 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            Text("Welcome!")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("headerPrimary"))
-                    .padding(.vertical, 100.0)
-            HStack {
-                TextField("Phone", text: $value)
+            VStack(spacing: 8.0){
+                Text("欢迎回来!")
+                    .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("headerPrimary"))
+                Text("很高兴再见到您!")
+                    .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("headerSecondary"))
+                
+            }.padding(.vertical,50.0)
+            
+            VStack(alignment: .leading, spacing: 8.0) {
+                Text("电话号码")
+                    .foregroundColor(Color("headerSecondary"))
+                TextField("", text: $value)
                         .padding()
                         .background(Color("tertiaryColor"))
-                        .cornerRadius(3.0)
+                        .cornerRadius(4.0)
+                        .foregroundColor(Color("headerPrimary"))
+                        
             }
-                    .padding([.leading, .bottom, .trailing], 16.0)
-            HStack {
-                TextField("code", text: $value)
+            .padding(.horizontal, 16.0)
+            .padding(.bottom, 20.0)
+            VStack(alignment: .leading, spacing: 8.0) {
+                Text("验证码")
+                    .foregroundColor(Color("headerSecondary"))
+                TextField("", text: $value)
                         .padding()
                         .background(Color("tertiaryColor"))
-                        .cornerRadius(3.0)
+                        .cornerRadius(4.0)
+                        .foregroundColor(Color("headerPrimary"))
             }
-                    .padding([.leading, .bottom, .trailing], 16.0)
+            .padding(.horizontal, 16.0)
+            .padding(.bottom, 20.0)
             HStack {
                 Button(action: {
                     RootVM.userFlow = .home
@@ -48,7 +64,8 @@ struct LoginView: View {
                                 .frame(height: 52.0)
                         Spacer()
                     }
-                            .background(Color("brand"))
+                    .background(Color("brand"))
+                    .cornerRadius(/*@START_MENU_TOKEN@*/4.0/*@END_MENU_TOKEN@*/)
 
                 })
             }
