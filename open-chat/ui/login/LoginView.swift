@@ -21,15 +21,36 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(Color("headerPrimary"))
-                    .padding(.bottom, 20)
+                    .padding(.vertical, 100.0)
             HStack {
                 TextField("Phone", text: $value)
                         .padding()
                         .background(Color("tertiaryColor"))
                         .cornerRadius(3.0)
             }
-                    .padding(.horizontal, 16.0)
+                    .padding([.leading, .bottom, .trailing], 16.0)
+            HStack {
+                TextField("code", text: $value)
+                        .padding()
+                        .background(Color("tertiaryColor"))
+                        .cornerRadius(3.0)
+            }
+                    .padding([.leading, .bottom, .trailing], 16.0)
+            HStack {
+                Button(action: {}, label: {
+                    HStack {
+                        Spacer()
+                        Text("LOGIN")
+                            .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(height: 52.0)
+                        Spacer()
+                    }
+                            .background(Color("brand"))
 
+                })
+            }
+                    .padding(.horizontal, 16.0)
             Spacer()
         }
                 .background(Color("primaryColor"))
