@@ -11,26 +11,28 @@ struct LoginView: View {
     @EnvironmentObject var RootVM: RootViewModal
     @State private var value = ""
 
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(named: "primaryColor")
-    }
+//    init() {
+//        UITableView.appearance().backgroundColor = UIColor(named: "primaryColor")
+//    }
 
     var body: some View {
         VStack {
-            Form {
-                Section(header: Text("First Name")) {
-                    TextField("First", text: $value).background(Color("tertiaryColor")).cornerRadius(3)
-                }
-
-                Section(header: Text("Last Name")) {
-                    TextField("Last", text: $value).background(Color("tertiaryColor")).cornerRadius(3)
-                }
-
-                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                    RootVM.userFlow = .home
-                }
+            Text("Welcome!")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("headerPrimary"))
+                    .padding(.bottom, 20)
+            HStack {
+                TextField("Phone", text: $value)
+                        .padding()
+                        .background(Color("tertiaryColor"))
+                        .cornerRadius(3.0)
             }
+                    .padding(.horizontal, 16.0)
+
+            Spacer()
         }
+                .background(Color("primaryColor"))
     }
 }
 
