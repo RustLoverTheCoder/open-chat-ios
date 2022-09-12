@@ -12,13 +12,16 @@ struct AccountRowView: View {
         VStack(spacing: 0) {
             HStack(spacing: 12) {
                 Image(systemName: "folder")
+                    .foregroundColor(Color("headerSecondary"))
                 
                 Text("我的收藏")
                     .font(.system(size: 16))
+                    .foregroundColor(Color("headerSecondary"))
                 
                 Spacer()
                 
                 Image(systemName: "chevron.right")
+                    .foregroundColor(Color("headerSecondary"))
             }
             .padding()
         }

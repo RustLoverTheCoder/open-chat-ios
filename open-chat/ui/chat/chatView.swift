@@ -22,13 +22,13 @@ struct ChatView: View {
             }.padding(.horizontal)
             Divider()
             MessageListView().background(Color("primaryColor"))
-            EditorView()
+            EditorView().background(Color("tertiaryColor"))
         }.background(Color("secondaryColor"))
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()  .edgesIgnoringSafeArea(.bottom)
+        ChatView()
     }
 }

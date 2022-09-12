@@ -33,7 +33,7 @@ struct AccountView: View {
                     AccountRowView()
                 }
             }
-        }
+        }.background(Color("secondaryColor"))
     }
 }
 

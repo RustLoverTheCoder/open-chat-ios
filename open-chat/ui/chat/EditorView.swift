@@ -8,40 +8,28 @@
 import SwiftUI
 
 struct EditorView: View {
-    @State private var text: String = ""
+    @State private var text: String = "123"
+    init(){
+        UITextView.appearance().backgroundColor = UIColor(named:"secondaryColor")
+    }
     var body: some View {
         VStack(spacing: 0) {
-            Divider()
-            ZStack {
-                VStack {
-                        HStack(spacing: 12) {
-                        Image(systemName: "speaker.wave.3.fill")
-                            ZStack(alignment: .leading){
-                                if(text.isEmpty){
-                                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                                    .font(.custom("Helvetica", size: 24))
-                                    .padding(.all)
-                                }
-                                TextEditor(text: $text)
-                                        .frame(height: 40)
-                                        .background(Color("chat_send_text_background"))
-                                        .cornerRadius(4)
-                            }
-                                Image(systemName: "face.smiling")
-                                Image(systemName: "plus.circle")
-                        }
-                        .frame(height: 56)
-                        .padding(.horizontal, 12)
-                        Spacer()
-                            }
-                        }
-                        .frame(height:56)
+                HStack(alignment: .center, spacing: 12) {
+                        Image(systemName: "speaker.wave.3.fill").foregroundColor(Color("headerPrimary"))
+                        TextEditor(text: $text)
+                                .frame(height: 40)
+                                .cornerRadius(100)
+                                .foregroundColor(Color("headerPrimary"))
+                            Image(systemName: "face.smiling").foregroundColor(Color("headerPrimary"))
+                            Image(systemName: "plus.circle").foregroundColor(Color("headerPrimary"))
                     }
+                    .padding(.horizontal, 12)
+            }.frame( height:56, alignment: .center)
     }
 }
 
 struct EditorView_Previews: PreviewProvider {
     static var previews: some View {
-        EditorView()
+        EditorView().background(Color("tertiaryColor"))
     }
 }

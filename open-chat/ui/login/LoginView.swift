@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var RootVM: RootViewModal
     @State private var value = ""
-
+    @State private var value2 = ""
 //    init() {
 //        UITableView.appearance().backgroundColor = UIColor(named: "primaryColor")
 //    }
@@ -31,6 +31,7 @@ struct LoginView: View {
             
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
+                    .font(.footnote)
                     .fontWeight(.medium)
                     .foregroundColor(Color("headerSecondary"))
                 TextField("", text: $value)
@@ -44,9 +45,10 @@ struct LoginView: View {
             .padding(.bottom, 20.0)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("验证码")
+                    .font(.footnote)
                     .fontWeight(.medium)
                     .foregroundColor(Color("headerSecondary"))
-                TextField("", text: $value)
+                TextField("", text: $value2)
                         .padding()
                         .background(Color("tertiaryColor"))
                         .cornerRadius(4.0)
