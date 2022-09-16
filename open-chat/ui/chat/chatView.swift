@@ -9,21 +9,37 @@ import SwiftUI
 
 struct ChatView: View {
     @EnvironmentObject var RootVM: RootViewModal
-    
+
     var body: some View {
-        VStack(spacing: 0){
-            HStack {
+        VStack(spacing: 0) {
+            HStack(alignment: .center) {
                 Button(action: {
                     RootVM.userFlow = .home
                 }, label: {
                     Image(systemName: "chevron.left").foregroundColor(Color("headerPrimary"))
                 })
                 Spacer()
-            }.padding(.horizontal)
+                VStack(spacing: 2) {
+                    Text("徐凤年徐凤年").font(.headline).foregroundColor(Color("headerPrimary"))
+                    Text("上次登录时间 22/09/27").font(.caption).foregroundColor(Color("headerSecondary"))
+                }
+                Spacer()
+                AsyncImage(url: URL(string: "https://www.com8.cn/wp-content/uploads/2020/11/20201108023309-5fa758e5be02a.jpg")) { image in
+                    image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+
+                } placeholder: {
+                    Color.gray
+                }
+                        .frame(width: 32, height: 32).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            }
+                    .padding(.horizontal).frame(height: 50.0).background(Color("tertiaryColor"))
             Divider()
             MessageListView().background(Color("primaryColor"))
             EditorView().background(Color("tertiaryColor"))
-        }.background(Color("secondaryColor"))
+        }
+                .background(Color("secondaryColor"))
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditorView: View {
-    @State private var text: String = "123"
+    @State private var text: String = ""
     init(){
         UITextView.appearance().backgroundColor = UIColor(named:"secondaryColor")
     }
@@ -16,11 +16,21 @@ struct EditorView: View {
         VStack(spacing: 0) {
                 HStack(alignment: .center, spacing: 12) {
                         Image(systemName: "speaker.wave.3.fill").foregroundColor(Color("headerPrimary"))
+                    if #available(iOS 16.0, *) {
                         TextEditor(text: $text)
                                 .frame(height: 40)
                                 .cornerRadius(100)
                                 .foregroundColor(Color("headerPrimary"))
-                            Image(systemName: "face.smiling").foregroundColor(Color("headerPrimary"))
+                                .accentColor(Color("headerPrimary"))
+                                .scrollContentBackground(.hidden)
+                    } else {
+                        TextEditor(text: $text)
+                                .frame(height: 40)
+                                .cornerRadius(100)
+                                .foregroundColor(Color("headerPrimary"))
+                    }
+
+                    Image(systemName: "face.smiling").foregroundColor(Color("headerPrimary"))
                             Image(systemName: "plus.circle").foregroundColor(Color("headerPrimary"))
                     }
                     .padding(.horizontal, 12)
