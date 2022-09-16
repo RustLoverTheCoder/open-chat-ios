@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct MessageListView: View {
+    var entries: [Entry] = Array(repeating: Entry(), count: 10)
     var body: some View {
         ScrollView {
-            LazyVStack(spacing:0){
-                ForEach(1...100, id: \.self) { message in
-                    MessageView()
-                }
+            ScrollViewReader { value in
+                ForEach(entries, id: \.id) { entry in
+                    Text(entry.getName())
+                }.onAppear {
+                            value.scrollTo(entries.last?.id, anchor: .center)
+                        }
             }
         }
     }
@@ -22,5 +25,13 @@ struct MessageListView: View {
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
         MessageListView()
+    }
+}
+
+struct Entry {
+    let id = UUID()
+
+    func getName() -> String {
+        return "Entry with id \(id.uuidString)"
     }
 }

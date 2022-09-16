@@ -35,7 +35,6 @@ struct ChatView: View {
                         .frame(width: 32, height: 32).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             }
                     .padding(.horizontal).frame(height: 50.0).background(Color("tertiaryColor"))
-            Divider()
             MessageListView().background(Color("primaryColor"))
             EditorView().background(Color("tertiaryColor"))
         }
