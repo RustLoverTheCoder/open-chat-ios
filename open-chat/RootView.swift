@@ -13,16 +13,22 @@ struct RootView: View {
         Group {
             switch RootVM.userFlow {
             case .login:
-                LoginView()
+                LoginView().transition(AnyTransition.asymmetric(
+                    insertion:.move(edge: .trailing),
+                    removal: .move(edge: .leading)))
             case .home:
-                ContentView()
+                ContentView().transition(AnyTransition.asymmetric(
+                    insertion:.move(edge: .trailing),
+                    removal: .move(edge: .leading)))
             case .chat:
-                ChatView()
+                ChatView().transition(AnyTransition.asymmetric(
+                    insertion:.move(edge: .trailing),
+                    removal: .move(edge: .leading)))
             }
         }
-                .transition(.opacity)
-                .environmentObject(RootVM)
-                .animation(/*@START_MENU_TOKEN@*/.easeInOut/*@END_MENU_TOKEN@*/, value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/2/*@END_MENU_TOKEN@*/)
+        .transition(.opacity)
+        .environmentObject(RootVM)
+        .animation(.default, value:RootVM.userFlow )
     }
 }
 
