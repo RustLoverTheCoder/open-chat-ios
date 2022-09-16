@@ -14,8 +14,9 @@ struct MessageListView: View {
             ScrollViewReader { value in
                 ForEach(entries, id: \.id) { entry in
                     MessageView()
-                }.onAppear {
-                            value.scrollTo(entries.last?.id, anchor: .center)
+                }
+                        .onAppear {
+                            value.scrollTo(entries.last?.id)
                         }
             }
         }
