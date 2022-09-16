@@ -23,6 +23,7 @@ struct EditorView: View {
                                 .foregroundColor(Color("headerPrimary"))
                                 .accentColor(Color("headerPrimary"))
                                 .scrollContentBackground(.hidden)
+                                .background(Color("secondaryColor"))
                     } else {
                         TextEditor(text: $text)
                                 .frame(height: 40)
@@ -34,7 +35,7 @@ struct EditorView: View {
                             Image(systemName: "plus.circle").foregroundColor(Color("headerPrimary"))
                     }
                     .padding(.horizontal, 12)
-            }.frame( height:56, alignment: .center)
+            }.frame( height: 56, alignment: .center)
     }
 }
 

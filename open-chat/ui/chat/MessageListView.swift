@@ -9,7 +9,13 @@ import SwiftUI
 
 struct MessageListView: View {
     var body: some View {
-        Spacer()
+        ScrollView {
+            LazyVStack(spacing:0){
+                ForEach(1...100, id: \.self) { message in
+                    MessageView()
+                }
+            }
+        }
     }
 }
 
