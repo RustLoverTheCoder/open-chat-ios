@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MessageListView: View {
-    var entries: [Entry] = Array(repeating: Entry(), count: 10)
+    var entries: [Entry] = Array(repeating: Entry(), count: 200)
     var body: some View {
         ScrollView {
             ScrollViewReader { value in
                 ForEach(entries, id: \.id) { entry in
-                    Text(entry.getName())
+                    MessageView()
                 }.onAppear {
                             value.scrollTo(entries.last?.id, anchor: .center)
                         }
