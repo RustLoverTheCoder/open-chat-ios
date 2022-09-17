@@ -15,22 +15,18 @@ struct EditorView: View {
     var body: some View {
         VStack(spacing: 0) {
                 HStack(alignment: .center, spacing: 12) {
-                        Image(systemName: "speaker.wave.3.fill").foregroundColor(Color("headerPrimary"))
-                    if #available(iOS 16.0, *) {
-                        TextEditor(text: $text)
-                                .frame(height: 40)
-                                .cornerRadius(100)
-                                .foregroundColor(Color("headerPrimary"))
-                                .accentColor(Color("headerPrimary"))
-                                .scrollContentBackground(.hidden)
-                                .background(Color("secondaryColor"))
-                    } else {
-                        TextEditor(text: $text)
-                                .frame(height: 40)
-                                .cornerRadius(100)
-                                .foregroundColor(Color("headerPrimary"))
-                    }
+                    AsyncImage(url: URL(string: "https://www.com8.cn/wp-content/uploads/2020/11/20201108023309-5fa758e5be02a.jpg")) { image in
+                        image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
 
+                    } placeholder: {
+                        Color.gray
+                    }
+                            .frame(width: 32, height: 32).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    TextField("消息@PUPU", text: $text)
+                        .foregroundColor(Color("headerPrimary"))
+                        .accentColor(Color("headerPrimary"))
                     Image(systemName: "face.smiling").foregroundColor(Color("headerPrimary"))
                             Image(systemName: "plus.circle").foregroundColor(Color("headerPrimary"))
                     }
