@@ -9,15 +9,29 @@ import SwiftUI
 
 struct MessageView: View {
     var body: some View {
-        HStack(spacing: 8.0) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Spacer()
+        ZStack(alignment:.topLeading){
+            HStack {
+                AsyncImage(url: URL(string: "https://www.com8.cn/wp-content/uploads/2020/11/20201108023309-5fa758e5be02a.jpg")) { image in
+                    image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+
+                } placeholder: {
+                    Color.gray
+                }
+                .frame(width: 40, height: 40).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            }.frame(width: 76.0)
+           
+            HStack(spacing: 8.0) {
+                Text("Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello").foregroundColor(Color("textNormal"))
+                Spacer()
+            }.padding(.leading,72.0)
         }
     }
 }
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView()
+        MessageView().background(Color("primaryColor"))
     }
 }
