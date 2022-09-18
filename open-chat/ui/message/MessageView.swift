@@ -20,10 +20,12 @@ struct MessageView: View {
                     Color.gray
                 }
                 .frame(width: 40, height: 40).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            }.frame(width: 76.0)
-           
+            }.frame(width: 76.0,height: 48)
             HStack(spacing: 8.0) {
-                Text("Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello").foregroundColor(Color("textNormal"))
+                VStack(alignment: .leading){
+                    Text("Tourssliver").foregroundColor(Color("headerPrimary"))
+                    Text("Hellowwwwwwwwwwwwwwwwwwwwww").foregroundColor(Color("textNormal"))
+                }
                 Spacer()
             }.padding(.leading,72.0)
         }
