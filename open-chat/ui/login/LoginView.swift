@@ -17,18 +17,18 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            VStack(spacing: 8.0){
-                Text("欢迎回来!")
-                    .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color("headerPrimary"))
-                Text("很高兴再见到您!")
-                    .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color("headerSecondary"))
-                
-            }.padding(.vertical,50.0)
-            
+//            VStack(spacing: 8.0){
+//                Text("欢迎回来!")
+//                    .font(.title)
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(Color("headerPrimary"))
+//                Text("很高兴再见到您!")
+//                    .font(.title3)
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(Color("headerSecondary"))
+//
+//            }.padding(.vertical,50.0)
+            LottieView(lottieFile: "loading").frame(width: 300, height: 300)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
                     .font(.footnote)
