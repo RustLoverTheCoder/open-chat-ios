@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+//import SDWebImage
+import SDWebImageLottieCoder
 
 struct RootView: View {
     @StateObject var RootVM = RootViewModal()
+    
+    init() {
+        let lottieCoder = SDImageLottieCoder.shared
+        SDImageCodersManager.shared.addCoder(lottieCoder)
+    }
+    
+    
     var body: some View {
         Group {
             switch RootVM.userFlow {

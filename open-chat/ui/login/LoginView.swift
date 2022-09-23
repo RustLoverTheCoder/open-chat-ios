@@ -28,7 +28,7 @@ struct LoginView: View {
                         .foregroundColor(Color("headerSecondary"))
 
             }.padding(.vertical,50.0)
-            LottieView(lottieFile: "loading").frame(width: 120, height: 120).background(.blue).cornerRadius(120.0)
+//            LottieView(lottieFile: "loading").frame(width: 120, height: 120).background(.blue).cornerRadius(120.0)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
                     .font(.footnote)
