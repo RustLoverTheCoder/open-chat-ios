@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import SDWebImage
 import SDWebImageLottieCoder
 
 struct RootView: View {

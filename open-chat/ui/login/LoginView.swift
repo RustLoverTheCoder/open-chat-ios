@@ -17,45 +17,49 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            VStack(spacing: 8.0){
+            VStack(spacing: 8.0) {
                 Text("欢迎回来!")
-                    .font(.title)
+                        .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("headerPrimary"))
                 Text("很高兴再见到您!")
-                    .font(.title3)
+                        .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("headerSecondary"))
 
-            }.padding(.vertical,50.0)
+            }
+                    .padding(.vertical, 50.0)
 //            LottieView(lottieFile: "loading").frame(width: 120, height: 120).background(.blue).cornerRadius(120.0)
+//            RlottiePlayer(player: TGSPlayer)
+//            LottiePlayer()
+            StickerView(lottieURL: URL(string: "https://assets6.lottiefiles.com/animated_stickers/lf_tgs_HktDR1.json")!)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
-                    .font(.footnote)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color("headerSecondary"))
+                        .font(.footnote)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color("headerSecondary"))
                 TextField("", text: $value)
                         .padding()
                         .background(Color("tertiaryColor"))
                         .cornerRadius(4.0)
                         .foregroundColor(Color("headerPrimary"))
-                        
+
             }
-            .padding(.horizontal, 16.0)
-            .padding(.bottom, 20.0)
+                    .padding(.horizontal, 16.0)
+                    .padding(.bottom, 20.0)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("验证码")
-                    .font(.footnote)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color("headerSecondary"))
+                        .font(.footnote)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color("headerSecondary"))
                 TextField("", text: $value2)
                         .padding()
                         .background(Color("tertiaryColor"))
                         .cornerRadius(4.0)
                         .foregroundColor(Color("headerPrimary"))
             }
-            .padding(.horizontal, 16.0)
-            .padding(.bottom, 20.0)
+                    .padding(.horizontal, 16.0)
+                    .padding(.bottom, 20.0)
             HStack {
                 Button(action: {
                     RootVM.userFlow = .home
@@ -63,14 +67,14 @@ struct LoginView: View {
                     HStack {
                         Spacer()
                         Text("登录")
-                            .font(.title3)
-                            .fontWeight(.medium)
-                            .foregroundColor(.white)
+                                .font(.title3)
+                                .fontWeight(.medium)
+                                .foregroundColor(.white)
                                 .frame(height: 52.0)
                         Spacer()
                     }
-                    .background(Color("brand"))
-                    .cornerRadius(/*@START_MENU_TOKEN@*/4.0/*@END_MENU_TOKEN@*/)
+                            .background(Color("brand"))
+                            .cornerRadius(/*@START_MENU_TOKEN@*/4.0/*@END_MENU_TOKEN@*/)
 
                 })
             }
