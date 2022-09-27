@@ -17,6 +17,7 @@ class LottieViewModel: ObservableObject {
 
     private var coder: SDImageLottieCoder?
     private var animationTimer: Timer?
+    private let tick: TimeInterval = 0.02
     private var currentFrame: UInt = 0
     private var playing: Bool = false
     private var speed: Double = 1.0
@@ -83,7 +84,7 @@ class LottieViewModel: ObservableObject {
         playing = true
 
         animationTimer?.invalidate()
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.05/speed, repeats: true, block: { (timer) in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: tick, repeats: true, block: { (timer) in
             guard self.playing else {
                 timer.invalidate()
                 return

@@ -38,7 +38,7 @@ struct LoginView: View {
                         .resizable()
                         .scaledToFit()
                         .onAppear {
-                            self.viewModel.loadAnimation(url: URL(string: "https://assets8.lottiefiles.com/packages/lf20_Zz37yH.json")!)
+                            self.viewModel.loadAnimation(url: URL(string: "https://assets2.lottiefiles.com/packages/lf20_pghdouhq.json")!)
                         }
             }
                     .frame(width: 176, height: 176)
