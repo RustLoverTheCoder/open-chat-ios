@@ -11,6 +11,7 @@ struct LoginView: View {
     @EnvironmentObject var RootVM: RootViewModal
     @State private var value = ""
     @State private var value2 = ""
+    @ObservedObject var viewModel: LottieViewModel = .init()
 //    init() {
 //        UITableView.appearance().backgroundColor = UIColor(named: "primaryColor")
 //    }
@@ -32,7 +33,16 @@ struct LoginView: View {
 //            LottieView(lottieFile: "loading").frame(width: 120, height: 120).background(.blue).cornerRadius(120.0)
 //            RlottiePlayer(player: TGSPlayer)
 //            LottiePlayer()
-            StickerView(lottieURL: URL(string: "https://assets6.lottiefiles.com/animated_stickers/lf_tgs_HktDR1.json")!)
+            HStack {
+                Image(uiImage: viewModel.image)
+                        .resizable()
+                        .scaledToFit()
+                        .onAppear {
+                            self.viewModel.loadAnimation(url: URL(string: "https://assets8.lottiefiles.com/packages/lf20_Zz37yH.json")!)
+                        }
+            }
+                    .frame(width: 176, height: 176)
+
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("电话号码")
                         .font(.footnote)

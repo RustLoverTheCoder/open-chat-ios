@@ -8,11 +8,16 @@ import SDWebImageLottieCoder
 
 struct StickerView: UIViewRepresentable {
     let lottieURL: URL
-    let imageView: SDAnimatedImageView = SDAnimatedImageView()
-    let pixelSize = CGSize(width: .tgStickerWidth, height: .tgStickerWidth)
+    let imageView: SDAnimatedImageView = SDAnimatedImageView.init()
+
+//    let pixelSize = CGSize(width: 10000, height: 10000)
+
     func makeUIView(context: Context) -> some UIView {
+        imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+//        imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
 //        imageView.sd_setImage(with: lottieURL)
-        imageView.sd_setImage(with: lottieURL, placeholderImage: nil, options: [],context: [SDWebImageContextOption.imageThumbnailPixelSize : pixelSize])
+//    SDWebImageContextOption.imageThumbnailPixelSize : pixelSize
+        imageView.sd_setImage(with: lottieURL, placeholderImage: nil, options: [], context: nil)
         return imageView
     }
 
